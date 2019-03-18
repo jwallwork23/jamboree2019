@@ -3,7 +3,7 @@ University of Reading weather station from the 4th September 2014 onwards.
 It provides hourly measurements of:
 Td: Dry bulb temperature
 RH: Relative humidity
-Sdur: Accumulated sunshine since 0000UTC
+Sdur: Accumulated sunshine per hour
 Rain_accum_der: Accumulated rainfall since 0000UTC
 P: Station pressure
 U10: 10m wind speed
@@ -27,7 +27,7 @@ given your prediction i.e. proportional to
 
 where \Sigma is the covariance matrix for the uncertainty in your
 estimate (we will construct a diagonal matrix from your individual
-variances if you use those), x is your vector of 6 predictions, and
+variances if you use those), x is your vector of 7 predictions, and
 x_T is the true value.
 
 You should submit your predictions by 3pm Tuesday 19th March by adding
