@@ -7,6 +7,7 @@ Sdur: Accumulated sunshine since 0000UTC
 Rain_accum_der: Accumulated rainfall since 0000UTC
 P: Station pressure
 U10: 10m wind speed
+TSoil100: 100cm soil temperature
 
 The data is stored in the .csv format, readable using e.g. numpy in
 Python, the pandas library in Python, or in R, or whatever you like.
