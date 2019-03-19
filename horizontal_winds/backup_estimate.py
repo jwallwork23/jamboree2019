@@ -14,17 +14,26 @@ for i in range(0,time_nr):
     xdat[i] = np.array( x_dat.iloc[i][1::] ).reshape(9,9)
     ydat[i] = np.array( y_dat.iloc[i][1::] ).reshape(9,9)
 
+# Average velocities
 x_av = np.average( xdat, axis=0 )
 y_av = np.average( ydat, axis=0 )
 
 # x_var = np.var( xdat, axis=0 )
 # y_var = np.var( ydat, axis=0 )
 
+# Covariance matrices
 x_cov = np.cov( xdat.reshape(time_nr,81), rowvar=False )
-y_cov = np.cov( ydat.reshape(time_nr/2,81), rowvar=False  )
+y_cov = np.cov( ydat.reshape(time_nr,81), rowvar=False  )
 
+# Estimates for time levels 19994, 19995 and 19996
 x_est = x_av.reshape(81)
 y_est = y_av.reshape(81)
+
+# Save as numpy arrays
+np.save('x_est.npy', x_est)
+np.save('y_est.npy', y_est)
+np.save('x_cov.npy', x_cov)
+np.save('y_cov.npy', y_cov)
 
 
 ### Plot covariance ###
